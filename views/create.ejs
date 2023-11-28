@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+  <h1>Create a New Post</h1>
+  <form action="/create" method="post">
+    <div class="col-sm-6">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="col-12">
+      <label for="content" class="form-label">Content:</label>
+      <input type="text" class="form-control" id="content" name="content" required>
+    </div>
+    <button class="Cbut" type="submit">Create Post</button>
+  </form>
+  <a href="/">Back to Home</a>
+</body>
+<%- include('partials/footer.ejs') %>
+

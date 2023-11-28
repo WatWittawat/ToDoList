@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<h2 style="margin-bottom: 50px;">Add your Task Below</h2>
+<ul>
+    <% posts.forEach(element => { %>
+        <li class="contentt">
+            <strong>Title : <%= element.title %></strong>
+            <p>Content : <%= element.content%></p>
+            <a href="/edit/<%= element.id %>">EDIT</a>
+            <form action="/delete/<%= element.id %>" method="post">
+                <button class="but" type="submit">delete</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+<a href="/create">Create New Post</a>
+
+<%- include('partials/footer.ejs') %>
